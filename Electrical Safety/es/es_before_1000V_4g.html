@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<div class="page">
+    <div class="header">
+        <div class="menu">
+            <a class="logo" href="../index.html" style="background-image: url(../img/logo.jpg)"></a>
+            <a class="menu-item" href="../index.html">Главная</a>
+            <div class="menu-item dropdown">Тест по электробезопасности до 1000В
+                <div class="dropdown-content">
+                    <a class="menu-item dropdown-t" href="../es/es_before_1000V_2g.html">ГРУППА II</a>
+                    <a class="menu-item dropdown-t" href="../es/es_before_1000V_3g.html">ГРУППА III</a>
+                    <a class="menu-item dropdown-t" href="../es/es_before_1000V_4g.html">ГРУППА IV</a>
+                    <a class="menu-item dropdown-t" href="../es/es_above_1000V_5g.html">ГРУППА V</a>
+                </div>
+            </div>
+            <div class="menu-item dropdown">Тест по электробезопасности выше 1000В
+                <div class="dropdown-content">
+                    <a class="menu-item dropdown-t" href="../es/es_above_1000V_2g.html">ГРУППА II</a>
+                    <a class="menu-item dropdown-t" href="../es/es_above_1000V_3g.html">ГРУППА III</a>
+                    <a class="menu-item dropdown-t" href="../es/es_above_1000V_4g.html">ГРУППА IV</a>
+                    <a class="menu-item dropdown-t" href="../es/es_above_1000V_5g.html">ГРУППА V</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="test">
+        <div class="introduce">
+            <div class="identify">
+                <label for="name"><h2>Введите ваше ФИО:</h2></label>
+                <input type="text" placeholder="Карлин Джордж Денис Патрик" class="name" id="name">
+            </div>
+            <div class="rules">
+                <h2>Правила</h2>
+                <ul>
+                    <li>Каждый билет содержит 5 вопросов, за каждый правильный ответ вы получаете 1 балл</li>
+                    <li>В каждом вопросе необходимо выбрать один вариант ответа и нажать кнопку "Следующий"</li>
+                    <li>По завершении тестирования, необходимо распечать результат, нажав кнопку "Печать"</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <div class="button blue" onclick="controller.startQuiz()">Начать</div>
+            </div>
+        </div>
+        <div class="question"></div>
+        <div class="result"></div>
+    </div>
+    <div class="footer"> &copy; 2021, <a href="http://piterenergomash.ru/" target="=_blank">&nbsp;&nbsp;PiterEnergoMash,&nbsp;&nbsp;</a> ALL RIGHTS RESERVED. </div>
+</div>
+
+<script src="questions_es_before_1000V_4g.js"></script>
+<script src="../js/index.js"></script>

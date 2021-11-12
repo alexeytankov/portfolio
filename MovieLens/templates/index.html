@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>MovieLens</title>
+<link rel="stylesheet" href="../static/bootstrap.css">
+
+<div class="login">
+<h1>MovieLens</h1>
+    <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+        <input type="text" name="userId" placeholder="userId" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <b>Персональные рекомендации:</b>
+    {% for pred in preds %}
+        <br>
+        {{ pred|safe }}
+    {% endfor %}
+    <!--{{pred}}-->
+    <br>
+    <!--{{score_pred}}-->
+    <br>
+    <br>
+</div>

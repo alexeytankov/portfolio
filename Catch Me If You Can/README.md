@@ -48,6 +48,6 @@ site_i – are ids of sites in this session. The mapping is given with a pickled
 - target – целевая переменная, принимает значение 1 для сессий Элис и 0 для сессий других пользователей
 
 **Public Leaderboard:**  
-Score - 0.95321  
+Score - 0.95628  
 
 **Official Website: https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2/**

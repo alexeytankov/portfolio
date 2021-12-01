@@ -12,6 +12,8 @@
 
 [**Loan Default Prediction**](https://github.com/alexeytankov/portfolio/tree/master/Loan%20Default%20Prediction) - Курсовой проект «Библиотеки Python для Data Science: продолжение»   
 
+[**MKB**](https://github.com/alexeytankov/portfolio/tree/master/MKB) - DS ХАКАТОН МКБ  
+
 [**Real Estate Price Prediction**](https://github.com/alexeytankov/portfolio/tree/master/Real%20Estate%20Price%20Prediction) - Курсовой проект «Python для Data Science» 
 
 [**Severstal**](https://github.com/alexeytankov/portfolio/tree/master/Severstal) - Модель определяющая качество продукции, производимое на обжиговой машине   

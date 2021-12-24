@@ -1,0 +1,1801 @@
+<html>
+<head>
+<meta name="Generator" content="TExplor2 (by THtmlWriter for Delphi)">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
+<meta name="Author" content="Gennadie Zuev (zuev@micex.com)">
+<title>Информационные объекты рынка "INFO12"</title>
+<script type="text/javascript" src="/ruxitagentjs_ICA2SVfqru_10221210805073954.js" data-dtconfig="rid=RID_-716100338|rpid=1067305965|domain=moex.com|reportUrl=/rb_ae942a9f-a9ae-4f31-a6f5-ad0dfc039513|app=ea7c4b59f27d43eb|rcdec=1209600000|featureHash=ICA2SVfqru|vcv=2|rdnt=1|uxrgce=1|bp=3|srmcrv=10|cuc=jfoade43|mel=100000|dpvc=1|ssv=4|lastModification=1630404161068|dtVersion=10221210805073954|srmcrl=1|tp=500,50,0,1|uxdcw=1500|vs=2|agentUri=/ruxitagentjs_ICA2SVfqru_10221210805073954.js"></script></head>
+<body bgcolor="#ffffff">
+<h2>Информационные объекты рынка "INFO12" - "Stock, Currency, Government Securities & Money Markets Data"</h2>
+<hr>
+<h3>Содержание</h3>
+<a href="#e">Перечислимые типы</a>
+<ul>
+<a href="#eTPeriod">TPeriod - Trading period</a><br>
+<a href="#eTUrgency">TUrgency - Message urgency</a><br>
+<a href="#eTStatus">TStatus - Status</a><br>
+<a href="#eTBuySell">TBuySell - Directivity of the order</a><br>
+<a href="#eTTradingStatus">TTradingStatus - Trading status of the security</a><br>
+<a href="#eTYesNo">TYesNo - Boolean type</a><br>
+<a href="#eTQuoteBasis">TQuoteBasis - Security price quote type</a><br>
+<a href="#eTSecType">TSecType - Типы ценных бумаг</a><br>
+<a href="#eTSystemID">TSystemID - Trade System identifier</a><br>
+<a href="#eTTimeStatus">TTimeStatus - Trading time event status</a><br>
+<a href="#eTBoolInt">TBoolInt - Boolean enumeration type</a><br>
+</ul>
+<a href="#i0">Интерфейс "Info" - "Information interface"</a>
+<ul>
+<a href="#it0">Таблицы</a>
+<ul>
+<a href="#t0_0">ALL_TRADES - All trades</a><br>
+<a href="#t0_1">BCMESSAGES - Broadcast messages</a><br>
+<a href="#t0_2">BOARDS - Boards</a><br>
+<a href="#t0_3">CURRENCY - Currencies</a><br>
+<a href="#t0_4">INDEXES - Indexes</a><br>
+<a href="#t0_5">MARKETS - Markets</a><br>
+<a href="#t0_6">ORDERBOOK - Order book</a><br>
+<a href="#t0_7">SECURITIES - Securities</a><br>
+<a href="#t0_8">SEC_SETTLECODE - Accrued interest depending on date of settlement</a><br>
+<a href="#t0_9">SETTLECODES - Settlement codes</a><br>
+<a href="#t0_10">TEINFO - Get statistics</a><br>
+<a href="#t0_11">TESYSTIME - Get system time of the trade server</a><br>
+<a href="#t0_12">TRADETIME - Trading time schedule</a><br>
+<a href="#t0_13">TRDTIMETYPES - Trading time events</a><br>
+<a href="#t0_14">USERS - Users</a><br>
+</ul>
+<a href="#ir0">Транзакции</a>
+<ul>
+<a href="#r0_0">CHANGE_PASSWORD - Change password</a><br>
+</ul>
+</ul>
+<hr>
+<a name="e"></a>
+<h3>Перечислимые типы</h3>
+<ul>
+<a name="eTPeriod"></a>
+<h4>TPeriod - Trading period (длина: 1, тип: ekGroup)</h4>
+<ul>
+List of trading periods.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">O</td>
+<td>&nbsp;</td>
+<td>Open period</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">N</td>
+<td>&nbsp;</td>
+<td>Normal trading period</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">C</td>
+<td>&nbsp;</td>
+<td>Closing period</td>
+</tr>
+</table>
+</ul>
+<a name="eTUrgency"></a>
+<h4>TUrgency - Message urgency (длина: 1, тип: ekCheck)</h4>
+<ul>
+List of available types of the messages.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">&nbsp;</td>
+<td>&nbsp;</td>
+<td>Nornal message</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">U</td>
+<td>&nbsp;</td>
+<td>Urgent message</td>
+</tr>
+</table>
+</ul>
+<a name="eTStatus"></a>
+<h4>TStatus - Status (длина: 1, тип: ekCombo)</h4>
+<ul>
+List of possible values of the status of fulfilment of trade operations.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">A</td>
+<td>&nbsp;</td>
+<td>Active (operations are permitted)</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">S</td>
+<td>&nbsp;</td>
+<td>Suspended (operations are prohibited)</td>
+</tr>
+</table>
+</ul>
+<a name="eTBuySell"></a>
+<h4>TBuySell - Directivity of the order (длина: 1, тип: ekGroup)</h4>
+<ul>
+List of acceptable values determining a directivity of the order.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">B</td>
+<td>&nbsp;</td>
+<td>Buy</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">S</td>
+<td>&nbsp;</td>
+<td>Sell</td>
+</tr>
+</table>
+</ul>
+<a name="eTTradingStatus"></a>
+<h4>TTradingStatus - Trading status of the security (длина: 1, тип: ekGroup)</h4>
+<ul>
+List of trading statuses of the security.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">N</td>
+<td>&nbsp;</td>
+<td>No trading</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">O</td>
+<td>&nbsp;</td>
+<td>Open period</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">C</td>
+<td>&nbsp;</td>
+<td>Trading session is closed</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">F</td>
+<td>&nbsp;</td>
+<td>Closing period</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">B</td>
+<td>&nbsp;</td>
+<td>Break of a tradind session</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">T</td>
+<td>&nbsp;</td>
+<td>Normal trade session</td>
+</tr>
+</table>
+</ul>
+<a name="eTYesNo"></a>
+<h4>TYesNo - Boolean type (длина: 1, тип: ekCheck)</h4>
+<ul>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">N</td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">Y</td>
+<td>&nbsp;</td>
+<td>Yes</td>
+</tr>
+</table>
+</ul>
+<a name="eTQuoteBasis"></a>
+<h4>TQuoteBasis - Security price quote type (длина: 1, тип: ekCombo)</h4>
+<ul>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">R</td>
+<td>&nbsp;</td>
+<td>The price is specified for unit of the security</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">A</td>
+<td>&nbsp;</td>
+<td>The price is specified for a face value of the security (currency market)</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">F</td>
+<td>&nbsp;</td>
+<td>The price is specified in percentage of a face value</td>
+</tr>
+</table>
+</ul>
+<a name="eTSecType"></a>
+<h4>TSecType - Типы ценных бумаг (длина: 1, тип: ekCombo)</h4>
+<ul>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">1</td>
+<td>&nbsp;</td>
+<td>Акции обыкновенные (                                                             )</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">2</td>
+<td>&nbsp;</td>
+<td>Акции привилегированные</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">3</td>
+<td>&nbsp;</td>
+<td>Ценная бумага РФ</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">4</td>
+<td>&nbsp;</td>
+<td>Ценные бумаги муниципальные и субъектов РФ</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">5</td>
+<td>&nbsp;</td>
+<td>Ценные бумаги ЦБ РФ</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">6</td>
+<td>&nbsp;</td>
+<td>Корпоративные облигации</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">7</td>
+<td>&nbsp;</td>
+<td>Облигации МФО</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">8</td>
+<td>&nbsp;</td>
+<td>Биржевые облигации</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">9</td>
+<td>&nbsp;</td>
+<td>Паи открытых ПИФов</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">A</td>
+<td>&nbsp;</td>
+<td>Паи интервальных ПИФов</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">B</td>
+<td>&nbsp;</td>
+<td>Паи закрытых ПИФов</td>
+</tr>
+</table>
+</ul>
+<a name="eTSystemID"></a>
+<h4>TSystemID - Trade System identifier (длина: 1, тип: ekCombo)</h4>
+<ul>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">C</td>
+<td>&nbsp;</td>
+<td>Currency market Trading System</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">P</td>
+<td>&nbsp;</td>
+<td>Securities market Trading System</td>
+</tr>
+</table>
+</ul>
+<a name="eTTimeStatus"></a>
+<h4>TTimeStatus - Trading time event status (длина: 1, тип: ekCombo)</h4>
+<ul>
+List of statuses of trading session events.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">A</td>
+<td>&nbsp;</td>
+<td>Actual</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">L</td>
+<td>&nbsp;</td>
+<td>Executed (lapsed)</td>
+</tr>
+</table>
+</ul>
+<a name="eTBoolInt"></a>
+<h4>TBoolInt - Boolean enumeration type (длина: 1, тип: ekCheck)</h4>
+<ul>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=40%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Константа</td>
+<td width=15%>Значение</td>
+<td>Описание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">0</td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">1</td>
+<td>&nbsp;</td>
+<td>Yes</td>
+</tr>
+</table>
+</ul>
+</ul>
+<hr>
+<a name="i0"></a>
+<h2>Интерфейс "Info" - "Information interface"</h2>
+<hr>
+<a name="it0"></a>
+<h3>Таблицы</h3>
+<ul>
+<a name="t0_0"></a>
+<h4>ALL_TRADES - All trades (обновляемая)</h4>
+<ul>
+Таблица содержит общую информацию (без указания сторон по сделке) по всем сделкам купли/продажи финансовых инструментов, совершенным в Торговой Системе с начала торговой сессии / The table contains the public information (without the indicating of the parties on the trade) under all trades of sale and purchase of securities accomplished in a MICEX Trading System from a beginning of trade session.<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>TRADENO</td>
+<td><b>Trade number</td>
+<td><b>INTEGER</td>
+<td align=right><b>12</td>
+<td><b>Идентификационный номер сделки в Торговой Системе / The system generated trade number</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">TRADETIME</td>
+<td>Time</td>
+<td>TIME</td>
+<td align=right>6</td>
+<td>Время регистрации сделки в Торговой Системе / The time that the trade was matched.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECBOARD</td>
+<td>Board</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор режима торгов для финансового инструмента / The board code for this trade.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECCODE<a href=#refs>*</a></td>
+<td>Security</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Идентификатор финансового инструмента / The security code for this trade.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PRICE</td>
+<td>Price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена за одну ценную бумагу / The trade price.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">QUANTITY</td>
+<td>Quantity</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Объём сделки, выраженный в лотах / The trade quantity (in lots).</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">VALUE</td>
+<td>Value</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Объём сделки, выраженный в руб / The trade volume (in currency units).</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ACCRUEDINT</td>
+<td>Accrued interest</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Процентный доход, выраженный в руб. / The accrued interest (in currency units).</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">YIELD</td>
+<td>Yield</td>
+<td>NUMERIC</td>
+<td align=right>9.2</td>
+<td>Доходность, рассчитанная по цене сделки / The yield of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PERIOD</td>
+<td>Trading period</td>
+<td>
+<a href="#eTPeriod">TPeriod</a></td>
+<td align=right>1</td>
+<td>Период торговой сессии, когда была заключена сделка / Period of trading session, when the trade took place.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SETTLECODE</td>
+<td>Settlement code</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Код расчётов по сделке /The code of settlement for the trade.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_1"></a>
+<h4>BCMESSAGES - Broadcast messages (обновляемая)</h4>
+<ul>
+Таблица содержит информацию о сообщениях, полученных от других участников торгов с момента начала торговой сессии / The table contains the messages received from other users from the beginning of trading session.<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">URGENCY</td>
+<td>Urgency</td>
+<td>
+<a href="#eTUrgency">TUrgency</a></td>
+<td align=right>1</td>
+<td>Срочность или важность сообщения / Determines whether the message is urgent or not.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">FROMUSER</td>
+<td>User</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Идентификатор пользователя, отправившего сообщение / The identifier of the user who sent the message.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MSGTIME</td>
+<td>Time</td>
+<td>CHAR</td>
+<td align=right>8</td>
+<td>Время, когда было отправлено сообщение / The time the user originally sent the message.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MSGTEXT</td>
+<td>Text</td>
+<td>CHAR</td>
+<td align=right>256</td>
+<td>Текст сообщения / The text of the message.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_2"></a>
+<h4>BOARDS - Boards (не обновляемая)</h4>
+<ul>
+Таблица содержит информацию о режимах торгов. Под режимом понимается набор правил проведения торгов, определяющих допустимые типы заявок, регламент торгов, виды расчетов и пр. Каждый режим представлен в таблице одной строкой / The table contains the information on boards. Board is understood as a set of trading rules determining allowed types of the orders, codes of settlements and etc. Each board is shown in the table by one row.<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>BOARDID</td>
+<td><b>Board identifier</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор режима торгов / The identifier of the board.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BOARDNAME</td>
+<td>Name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование режима / Board name.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">STATUS</td>
+<td>Status</td>
+<td>
+<a href="#eTStatus">TStatus</a></td>
+<td align=right>1</td>
+<td>Индикатор "торговые операции разрешены/запрещены" / The indicator "the trade operations permit / prohibit".</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETID</td>
+<td>Market</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор рынка, к которому относится данный режим / The identifier of the market for the given board.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LATNAME</td>
+<td>English name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование режима торгов на английском языке / Board name in English.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_3"></a>
+<h4>CURRENCY - Currencies (не обновляемая)</h4>
+<ul>
+Справочник валют Торговой системы<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>CURRCODE</td>
+<td><b>Currency</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Код валюты / Currency code.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CURRENCYNAME</td>
+<td>Name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование валюты / Currency name.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CROSSRATE</td>
+<td>Cross rate</td>
+<td>CHAR</td>
+<td align=right>10</td>
+<td>Курс в рублях за единицу валюты с точностью до 4 знаков / Ruble's cross rate, significant to four decimal places.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_4"></a>
+<h4>INDEXES - Indexes (обновляемая)</h4>
+<ul>
+Таблица содержит текущую биржевую информацию по индексам ММВБ / The table contains information for MICEX indexes.<p>
+<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>INDEXBOARD</td>
+<td><b>Board</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор режима торгов для ценных бумаг, участвующих в расчёте индекса / The identifier of a board for the securities participating in calculation of the index.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>INDEXCODE<a href=#refs>*</a></td>
+<td><b>Index identifier</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Идентификатор биржевого индекса / The identifier of the index.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">NAME</td>
+<td>Name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование индекса /  Index name.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SHORTNAME</td>
+<td>Short name</td>
+<td>CHAR</td>
+<td align=right>10</td>
+<td>Краткое наименование индекса / Index short name.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CURRENTVALUE</td>
+<td>Value</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Текущее значение индекса / Current value.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LASTVALUE</td>
+<td>Last</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Последнее значение индекса предыдущего торгового дня / Last value of an index of the previous trade day.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">DECIMALS</td>
+<td>Decimals</td>
+<td>INTEGER</td>
+<td align=right>2</td>
+<td>Количество десятичных знаков дробной части числа / Quantity of decimal signs of a fractional part of number.Will be used for formatting of index value fields.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LATNAME</td>
+<td>English name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование индекса на английском языке / Index name in English.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">TIME</td>
+<td>Time</td>
+<td>TIME</td>
+<td align=right>6</td>
+<td>Время вычисления значения индекса / The time of last change of the index value.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">OPENVALUE</td>
+<td>Open</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Значение индекса на открытие текущего торгового дня / Open value of an index of the current trading session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">VALTODAY</td>
+<td>Value today</td>
+<td>INTEGER</td>
+<td align=right>16</td>
+<td>Объём совершенных сделок по бумагам, входящим в индекс, выраженный в руб. / The total value of today trades with securities included into the Index, expressed in Rubles.
+</td>
+</tr>
+</table>
+</ul>
+<a name="t0_5"></a>
+<h4>MARKETS - Markets (не обновляемая)</h4>
+<ul>
+Таблица содержит информацию о рынках. Под рынком понимается группа режимов торгов, объединенных по административным признакам (ГЦБ, НГЦБ, РПС) / The table contains the information on the markets. Market is understood as group of boards, integrated to administrative tags (state securities market, non-state securities market, quote-driven trading, etc).<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>MARKETID</td>
+<td><b>Market</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор рынка / The identifier of the market.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETNAME</td>
+<td>Name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование рынка / Name of the market.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">STATUS</td>
+<td>Status</td>
+<td>
+<a href="#eTStatus">TStatus</a></td>
+<td align=right>1</td>
+<td>Индикатор "торговые операции разрешены/запрещены" / The indicator "the trade operations permit / prohibit".</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LATNAME</td>
+<td>English name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование рынка на английском языке / Name of the market in English.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_6"></a>
+<h4>ORDERBOOK - Order book (обновляемая, очищать при обновлении)</h4>
+<ul>
+Таблица содержит информацию о заявках с лучшими ценами (отдельно на покупку и на продажу) по данному финансовому инструменту. Каждая строка таблицы соответствует одному уровню цен и отражает суммарное количество лотов, выставленных на  покупку или продажу по этой цене. / The table contains the information on the orders with the best prices (separately on purchasing and on sale) on the given security. Each table line corresponds to one price level and mirrors general quantity of lots exhibited to purchasing or sale on this price.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Входное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECBOARD</td>
+<td>Board</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор режима торгов / The identifier of a board for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECCODE<a href=#refs>*</a></td>
+<td>Security</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Идентификатор финансового инструмента / The identifier of the security.</td>
+</tr>
+</table>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECBOARD</td>
+<td><b>Board</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор режима торгов для финансового инструмента / The identifier of a board for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECCODE<a href=#refs>*</a></td>
+<td><b>Security</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Идентификатор финансового инструмента / The identifier of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>BUYSELL</td>
+<td><b>Buy/Sell</td>
+<td>
+<a href="#eTBuySell"><b>TBuySell</a></td>
+<td align=right><b>1</td>
+<td><b>Направленность заявки - "купля/продажа" / Directivity of the orders - "buy / sell".</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>PRICE</td>
+<td><b>Price</td>
+<td><b>PRICE</td>
+<td align=right><b>9</td>
+<td><b>Цена котировки / The price of the quotation.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">QUANTITY</td>
+<td>Quantity</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Количество ценных бумаг, выраженное  в лотах / Quantity of the securities, expressed in lots.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">YIELD</td>
+<td>Yield</td>
+<td>NUMERIC</td>
+<td align=right>9.2</td>
+<td>Доходность по цене котировки (не используется на валютном рынке) / Yield at the given price (don't use for currency market).</td>
+</tr>
+</table>
+</ul>
+<a name="t0_7"></a>
+<h4>SECURITIES - Securities (обновляемая)</h4>
+<ul>
+Таблица содержит текущую биржевую информацию о финансовых инструментах, относящихся к различным режимам торгов.Каждая строка таблицы соответствует уникальной паре режим торгов - финансовый инструмент / The table contains the current exchange information on securities relating different boards. Each table line corresponds to a unique pair a board - security.<p>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Входное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETID</td>
+<td>Market</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор рынка / The particular market for which security information should be sent, or BLANK for all markets.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BOARDID</td>
+<td>Board</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор режима торгов / The particular board for which security information should be sent, or BLANK for all boards.</td>
+</tr>
+</table>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECBOARD</td>
+<td><b>Board code</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор режима торгов / The identifier of a board for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECCODE<a href=#refs>*</a></td>
+<td><b>Security code</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Идентификатор финансового инструмента / The identifier of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECNAME</td>
+<td>Security name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование финансового инструмента / The security name.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">REMARKS</td>
+<td>Remarks</td>
+<td>CHAR</td>
+<td align=right>8</td>
+<td>Примечание / The security remarks.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SHORTNAME</td>
+<td>Security short name</td>
+<td>CHAR</td>
+<td align=right>10</td>
+<td>Краткое наименование бумаги / The short name for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">STATUS</td>
+<td>Status</td>
+<td>
+<a href="#eTStatus">TStatus</a></td>
+<td align=right>1</td>
+<td>Индикатор "торговые операции разрешены/запрещены" / The indicator "the trade operations permit / prohibit".</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">TRADINGSTATUS</td>
+<td>Trading status</td>
+<td>
+<a href="#eTTradingStatus">TTradingStatus</a></td>
+<td align=right>1</td>
+<td>Индикатор состояния торговой сессии по инструменту / Status indicator of trade session on the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETCODE</td>
+<td>Market code</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор рынка на котором торгуется финансовый инструмент / The identifier of the market on which one is traded the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">INSTRID</td>
+<td>Instrument code</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор группы инструментов / The instrument code for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECTORID</td>
+<td>Sector code</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>The sector code for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LOTSIZE</td>
+<td>Lot size</td>
+<td>INTEGER</td>
+<td align=right>8</td>
+<td>Количество ценных бумаг в одном стандартном лоте / Quantity of the securities in one standard lot.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MINSTEP</td>
+<td>Minimum price step</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Минимально возможная разница между ценами, указанными в заявках на покупку/продажу ценных бумаг / The minimum price step for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">FACEVALUE</td>
+<td>Face value</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Номинальная стоимость одной ценной бумаги, в валюте инструмента / The face value of one security, in currency of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">FACEUNIT</td>
+<td>Currency of the security</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Код валюты, в которой выражен номинал ценной бумаги / The code of currency, in which one is expressed a rating of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PREVDATE</td>
+<td>Previous date</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Дата предыдущего торгового дня / The last date, that the security traded.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PREVPRICE</td>
+<td>Previous price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена последней сделки предыдущего торгового дня / Closing price of the previous trading session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">DECIMALS</td>
+<td>Number of decimals</td>
+<td>INTEGER</td>
+<td align=right>2</td>
+<td>Количество десятичных знаков дробной части числа. Используется для форматирования значений полей с типом PRICE / The number of implied decimals in prices for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">YIELD</td>
+<td>Yield</td>
+<td>NUMERIC</td>
+<td align=right>9.2</td>
+<td>Доходность, рассчитанная по цене сделки / The interest rate at the price of the last trade.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ACCRUEDINT</td>
+<td>Accrued interest</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Накопленный купонный доход на дату торгов в расчёте на одну бумагу, выраженный в руб / The accrued interest for date of tading session in calculation on one security expressed in currency.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PRIMARYDIST</td>
+<td>Primary auction</td>
+<td>
+<a href="#eTYesNo">TYesNo</a></td>
+<td align=right>1</td>
+<td>Индикатор информирующий, что по данному инструменту проводится аукцион / The indicator informing, that on given the security for is in primary distribution.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MATDATE</td>
+<td>Maturity date</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Дата погашения / The maturity date.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">COUPONVALUE</td>
+<td>Coupon value</td>
+<td>NUMERIC</td>
+<td align=right>13.2</td>
+<td>Величина купона, выраженная в руб / Value of the coupon expressed in currency (used for coupon securities).</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">COUPONPERIOD</td>
+<td>Duration of the coupon</td>
+<td>INTEGER</td>
+<td align=right>4</td>
+<td>Длительность купона, выраженная в днях / Duration of the coupon expressed in days (used for coupon securities).</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">NEXTCOUPON</td>
+<td>Next coupon</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Дата окончания купона / The date of next coupon will paid (used for coupon securities).</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ISSUESIZE</td>
+<td>Issue size</td>
+<td>INTEGER</td>
+<td align=right>16</td>
+<td>Объём выпуска / Issue size.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PREVWAPRICE</td>
+<td>PrevWAPrice</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Значение оценки предыдущего торгового дня / Weighted average price of previous trade session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">YIELDATPREVWAPRICE</td>
+<td>Yield at PrevWAPrice</td>
+<td>NUMERIC</td>
+<td align=right>9.2</td>
+<td>Доходность по оценке предыдущего торгового дня / The interest rate according to the weighted average price of previous trade session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">REPO2PRICE</td>
+<td>The second part REPO price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена второй части РЕПО / The price for the second period REPO trading session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CURRENCYID</td>
+<td>Linked currency</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Код сопряженной валюты ценной бумаги / The code of linked currency of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BUYBACKPRICE</td>
+<td>Buy back price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена выкупа / The buy back price in REPO operations or buy back operations of issiuers.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BUYBACKDATE</td>
+<td>Buy back date</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Дата, к которой рассчитывается доходность / Date of buy back operation.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">AGENTID</td>
+<td>Issue agent</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Идентификатор фирмы-агента по размещению / Firm identifier of the issue agent.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">QUOTEBASIS</td>
+<td>Price type</td>
+<td>
+<a href="#eTQuoteBasis">TQuoteBasis</a></td>
+<td align=right>1</td>
+<td>Тип цены / Security price quote type.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ISIN</td>
+<td>ISIN</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Международный идентификационный код ценной бумаги / International security identification number. </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LATNAME</td>
+<td>English name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование финансового инструмента на английском языке / The security name in English.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">REGNUMBER</td>
+<td>Registration number</td>
+<td>CHAR</td>
+<td align=right>20</td>
+<td>Номер государственной регистрации / State registration number. </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PREVLEGALCLOSEPRICE</td>
+<td>Previous close price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена закрытия предыдущего дня / Official close price of the previous trading session</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PREVADMITTEDQUOTE</td>
+<td>Previous admitted quote</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Признаваемая котировка предыдущего дня / Admitted quote of the previous trading session</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECTYPE</td>
+<td>Security type</td>
+<td>
+<a href="#eTSecType">TSecType</a></td>
+<td align=right>1</td>
+<td>Тип ценной бумаги / Security type.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BID</td>
+<td>Bid</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Лучшая котировка на покупку / The current bid price for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BIDDEPTH</td>
+<td>Bid depth</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Объем заявок на покупку по лучшей котировке, выраженный в лотах / The current total outstanding buy order quantities at the current bid price for the security expressed in lots.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BIDDEPTHT</td>
+<td>Total bid depth</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Объем всех заявок на покупку в очереди Торговой Системы, выраженный в лотах / The total of all outstanding buy order quantities (ie, at all prices) for the security expressed in lots.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">NUMBIDS</td>
+<td>NumBids</td>
+<td>INTEGER</td>
+<td align=right>6</td>
+<td>Количество заявок на покупку в очереди Торговой системы / The number of outstanding buy orders for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">OFFER</td>
+<td>Offer</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Лучшая котировка на продажу / The current offer price for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">OFFERDEPTH</td>
+<td>Offer depth</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Объём заявок на продажу по лучшей котировке, выраженный в лотах / The current total outstanding sell order quantities at the current offer price for the security expressed in lots.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">OFFERDEPTHT</td>
+<td>Total offer depth</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Объём всех заявок на продажу в очереди Торговой Системы, выраженный в лотах / The total of all outstanding sell order quantities (ie, at all prices) for the security expressed in lots.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">NUMOFFERS</td>
+<td>NumOffers</td>
+<td>INTEGER</td>
+<td align=right>6</td>
+<td>Количество заявок на продажу в очереди Торговой системы / The number of outstanding sell orders for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">OPEN</td>
+<td>Open</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена первой сделки / Open price for the security today.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">HIGH</td>
+<td>High</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Максимальная цена сделки / The highest traded price for the security today.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LOW</td>
+<td>Low</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Минимальная цена сделки / The lowest traded price for the security today.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LAST</td>
+<td>Last</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена последней сделки / The price of the last trade.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LASTNEG</td>
+<td>Last negdeal</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>The price of the last negotiated deal.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CHANGE</td>
+<td>To closing</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Изменение цены последней сделки по отношению к цене  последней сделки предыдущего торгового / Change of the price of last trade in relation to the closing price of previous trade session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">QTY</td>
+<td>Quantity</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Объём последней сделки, в лотах / Volume of the last trade expressed in lots.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">TIME</td>
+<td>Time</td>
+<td>TIME</td>
+<td align=right>6</td>
+<td>Время заключения последней сделки / The time of the last trade for the security today.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">VOLTODAY</td>
+<td>Volume today</td>
+<td>INTEGER</td>
+<td align=right>16</td>
+<td>Объём совершенных сделок, выраженный в единицах ценных бумаг / The total quantity of all trades for the security today expressed in terms of the securities.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">VALTODAY</td>
+<td>Value today</td>
+<td>INTEGER</td>
+<td align=right>16</td>
+<td>Объём совершенных сделок, выраженный в руб. / The total value of all trades for the security today expressed in currency.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">VALUE</td>
+<td>Value</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Объём последней сделки, в руб./ Volume of last trade expressed in currency.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">WAPRICE</td>
+<td>Weighted average price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Средневзвешенная цена / Weighted average price of current trade session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">HIGHBID</td>
+<td>The highest bid</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Наибольшая цена спроса в течение торговой сессии / The highest bid price for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LOWOFFER</td>
+<td>The lowest offer</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Наименьшая цена предложения в течение торговой сессии / The lowest offer price for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">NUMTRADES</td>
+<td>Number of the trades</td>
+<td>INTEGER</td>
+<td align=right>9</td>
+<td>Количество сделок за торговый день / Number of the trades for current trade session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">YIELDATWAPRICE</td>
+<td>Yield at the weighted average price</td>
+<td>NUMERIC</td>
+<td align=right>9.2</td>
+<td>Доходность по средневзвешенной цене / The yield at the weighted average price for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">PRICEMINUSPREVWAPRICE</td>
+<td>To PrevWAPrice</td>
+<td>PRICE</td>
+<td align=right>10</td>
+<td>Цена последней сделки к оценке предыдущего дня / The price of last trade to a weighted average price of the previous day.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CLOSEPRICE</td>
+<td>Closing</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена послеторгового периода / The price of period of closing.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CLOSEYIELD</td>
+<td>Yield at closing</td>
+<td>NUMERIC</td>
+<td align=right>9.2</td>
+<td>Доходность по цене послеторгового периода / Yield at the price of period of closing.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LASTBID</td>
+<td>Last bid</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Лучшая котировка на покупку на момент завершения нормального периода торгов / Last bid.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LASTOFFER</td>
+<td>Last offer</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Лучшая котировка на покупку на момент завершения нормального периода торгов / Last offer.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LASTSETTLECODE</td>
+<td>Settlement code</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Код расчётов по последней сделке / The code of settlement of the last trade.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">BASEPRICE</td>
+<td>Base SWAP price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Базовый курс при торговле СВОП инструментами / Base SWAP price.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETPRICE</td>
+<td>Previous market price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Рыночная цена ценной бумаги по результатам торгов  предыдущего дня, за одну ценную бумагу / Market price of the previous trading session for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETPRICETODAY</td>
+<td>Market price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Рыночная цена по результатам торгов сегодняшнего дня, за одну ценную бумагу / Market price of current trade session</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">DURATION</td>
+<td>Duration</td>
+<td>NUMERIC</td>
+<td align=right>7.2</td>
+<td>Дюрация / Duration</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SETTLECODE</td>
+<td>Settlement code</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Код расчётов по умолчанию для данного инструмента / Default settlement code for security</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LOPENPRICE</td>
+<td>Open price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Официальная цена открытия, рассчитываемая как средневзвешенная цена сделок первого часа торговой сессии, включая сделки предторгового периода / The official open price, which is calculated as weighted average of trades during first trading hour, including open period trades. </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LCURRENTPRICE</td>
+<td>Current price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Официальная текущая цена, рассчитываемая как средневзвешенная цена сделок последнего, предшествующего моменту расчета, часа торговой сессии / The official current price calculated as the weighted average price of all the trades that have been concluded within the previous (i.e. before the start of this calculation) 60 minutes of the trading session.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LCLOSEPRICE</td>
+<td>Close price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Официальная цена закрытия, рассчитываемая как средневзвешенная цена сделок последнего часа торговой сессии, включая сделки послеторгового  периода / The official closing price; calculated as the weighted average price of all the trades that have been concluded during the last 60 minutes of the trading session, including all the trades concluded during the post-trade period.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">MARKETPRICE2</td>
+<td>Market Price 2</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Рыночная цена 2, рассчитываемая в соответствии с методикой ФСФР / The market price 2 calculated according to FCSM's decree</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ADMITTEDQUOTE</td>
+<td>Admitted quote</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Признаваемая котировка, рассчитываемая в соответствии с методикой ФСФР / Admitted quote calculated according to FCSM's decree</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">OPENPERIODPRICE</td>
+<td>Open period price</td>
+<td>PRICE</td>
+<td align=right>9</td>
+<td>Цена предторгового периода / Open period price</td>
+</tr>
+</table>
+</ul>
+<a name="t0_8"></a>
+<h4>SEC_SETTLECODE - Accrued interest depending on date of settlement (не обновляемая)</h4>
+<ul>
+По данному запросу, Торговая система предоставляет информацию по допустимым кодам расчётов для заданного инструмента, соответствующим датам расчётов и значениям накопленного дохода / By the given inquiry, the MICEX Trading System send information on allowed codes of settlement for the given dates and values of the accrued interest.<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Входное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECBOARD</td>
+<td>Board</td>
+<td>CHAR</td>
+<td align=right>4</td>
+<td>Идентификатор режима торгов для финансового инструмента / The identifier of a board for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SECCODE<a href=#refs>*</a></td>
+<td>Security</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Идентификатор финансового инструмента / The identifier of the security.</td>
+</tr>
+</table>
+<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECBOARD</td>
+<td><b>Board</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор режима торгов для финансового инструмента / The identifier of a board for the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECCODE<a href=#refs>*</a></td>
+<td><b>Security</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Идентификатор финансового инструмента / The identifier of the security.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SETTLECODE</td>
+<td><b>Settlement code</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Код расчётов / The code of settlement.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ACCRUEDINT</td>
+<td>Accrued interest</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Накопленный процентный доход на дату SettleDate для кода расчётов, выраженный в руб.  / The accrued interest for date SettleDate for the code of settlement expressed in currency.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">ACCRUEDINT2</td>
+<td>Accrued interest 2</td>
+<td>PRICE</td>
+<td align=right>16</td>
+<td>Накопленный процентный доход на дату SettleDate2 для кода расчётов, выраженный в руб.  / The accrued interest for date SettleDate2 for the code of settlement expressed in currency.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_9"></a>
+<h4>SETTLECODES - Settlement codes (не обновляемая)</h4>
+<ul>
+Коды расчётов/Settlement codes<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SETTLECODE</td>
+<td>Settlement code</td>
+<td>CHAR</td>
+<td align=right>12</td>
+<td>Код расчётов по сделке / The code of settlement for the trade.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">DESCRIPTION</td>
+<td>Description</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Описание / Description of the settlement code.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SETTLEDATE</td>
+<td>Date of settlement</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Дата расчётов внесистемной сделки или первой части сделки РЕПО / The date of settlement for the settlement code.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SETTLEDATE2</td>
+<td>Date of setlement 2</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Дата расчётов 2, для кодов расчётов типа 'R', соответствует дате исполнения второй части РЕПО / The date of settlement 2, for codes of settlement of a type 'R', corresponds to date of fulfilment of the second part of REPO.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_10"></a>
+<h4>TEINFO - Get statistics (не обновляемая)</h4>
+<ul>
+Таблица состоит из одной строки и содержит информацию о торговой системе / The table consists of one raw and contains the information about the trading system.<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SESSION</td>
+<td>Trading session identifier</td>
+<td>INTEGER</td>
+<td align=right>10</td>
+<td>Уникальный номер торговой сессии / Unique identifier of trading session</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">SYSTEMID</td>
+<td>Trading System identifier</td>
+<td>
+<a href="#eTSystemID">TSystemID</a></td>
+<td align=right>1</td>
+<td>Идентификатор торговой системы / Trading System identifier</td>
+</tr>
+</table>
+</ul>
+<a name="t0_11"></a>
+<h4>TESYSTIME - Get system time of the trade server (обновляемая, очищать при обновлении)</h4>
+<ul>
+Таблица состоит из одной строки и содержит информацию о текущем времени торгового сервера. Используется для синхронизации времени на клиентском рабочем месте с временем торгового сервера / The table consists of one raw and contains the information on a running time of the trade server. Can be used for synchronization of time on a client workstation with time of the trade server.<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">TIME</td>
+<td>Time</td>
+<td>TIME</td>
+<td align=right>6</td>
+<td>Текущее время торгового сервера / The current time of the MICEX Trading System.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">DATE</td>
+<td>Date</td>
+<td>DATE</td>
+<td align=right>8</td>
+<td>Текущая дата торгового сервера / The current date of the MICEX Trading System.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_12"></a>
+<h4>TRADETIME - Trading time schedule (обновляемая, очищать при обновлении)</h4>
+<ul>
+Таблица содержит информацию о временных событиях, соответствующих изменению состояния торгов / The table contains the information on trading session events.<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>TIME</td>
+<td><b>Time</td>
+<td><b>TIME</td>
+<td align=right><b>6</td>
+<td><b>Время наступления события / Time of an occurrence of the event.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>INSTRID</td>
+<td><b>Instrument</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор группы финансовых инструментов, для которой определено событие / The identifier of instrument, for which one the event is defined.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>BOARDID</td>
+<td><b>Board</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор режима финансовых инструментов,  для которого определено событие / The identifier of a board, for which one the event is defined.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>TYPE</td>
+<td><b>Type</td>
+<td><b>CHAR</td>
+<td align=right><b>1</td>
+<td><b>Тип события / Type of event.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">STATUS</td>
+<td>Status</td>
+<td>
+<a href="#eTTimeStatus">TTimeStatus</a></td>
+<td align=right>1</td>
+<td>Признак -  наступило событие или еще нет / The indicator - has the event lapsed or still is active.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>SECCODE<a href=#refs>*</a></td>
+<td><b>Security</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Идентификатор финансового инструмента / The identifier of the security, for which one the event is defined.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>MARKETID</td>
+<td><b>Market</td>
+<td><b>CHAR</td>
+<td align=right><b>4</td>
+<td><b>Идентификатор рынка / The identifier of the market, for which one the event is defined.</td>
+</tr>
+</table>
+</ul>
+<a name="t0_13"></a>
+<h4>TRDTIMETYPES - Trading time events (не обновляемая)</h4>
+<ul>
+Типы событий расписания торгов / Type of trading session events<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>TYPE</td>
+<td><b>Type</td>
+<td><b>CHAR</td>
+<td align=right><b>1</td>
+<td><b>Тип события / Type of event</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">DESCRIPTION</td>
+<td>Description</td>
+<td>CHAR</td>
+<td align=right>50</td>
+<td>Описание / Description</td>
+</tr>
+</table>
+</ul>
+<a name="t0_14"></a>
+<h4>USERS - Users (обновляемая)</h4>
+<ul>
+Таблица содержит информацию о трейдерах, представляющих Вашу фирму и участвующих в торгах финансовыми инструментами. Каждый участник торгов представлен в этой таблице одной строкой.
+
+The table contains the information on the users of your firm. Each user is shown in this table by one row.<p>
+<p>
+Входных полей нет<br>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Выходное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0"><b>USERID</td>
+<td><b>User code</td>
+<td><b>CHAR</td>
+<td align=right><b>12</td>
+<td><b>Код участника / The identifier of the user.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">USERNAME</td>
+<td>User name</td>
+<td>CHAR</td>
+<td align=right>30</td>
+<td>Наименование участника / The name of the user padded with blanks.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">STATUS</td>
+<td>Status</td>
+<td>
+<a href="#eTStatus">TStatus</a></td>
+<td align=right>1</td>
+<td>Индикатор "торговые операции разрешены/запрещены" / The indicator "the trade operations permit / prohibit".</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">IPGATEWAY</td>
+<td>IP Gateway</td>
+<td>CHAR</td>
+<td align=right>20</td>
+<td>Сервер доступа / The address of the Gateway through which a user is logged on to the MICEX Trade System.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">IPCLIENT</td>
+<td>IP address</td>
+<td>CHAR</td>
+<td align=right>20</td>
+<td>Рабочая станция / The address of the user's machine.</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">LOGGEDON</td>
+<td>LoggedOn</td>
+<td>
+<a href="#eTBoolInt">TBoolInt</a></td>
+<td align=right>1</td>
+<td>Индикатор информирующий, что пользователь зарегистрировался в Торговой системе / LoggedOn field is equal to "1" to indicate that the user is currently logged onto the MICEX Trade System, or "0" if the user is not currently logged onto the MICEX Trade System.</td>
+</tr>
+</table>
+</ul>
+</ul>
+<hr>
+<a name="ir0"></a>
+<h3>Транзакции</h3>
+<ul>
+<a name="r0_0"></a>
+<h4>CHANGE_PASSWORD - Change password</h4>
+<ul>
+Изменение пароля пользователем / Change password<p>
+<table cellspacing=1 cellpadding=1 border=0 width=90%>
+<tr bgcolor="#c0c0c0">
+<td width=15%>Входное поле</td>
+<td width=20%>Описание</td>
+<td width=7%>Тип</td>
+<td width=5% align=right>Размер</td>
+<td>Примечание</td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">CURRENTPW</td>
+<td>Current password</td>
+<td>CHAR</td>
+<td align=right>10</td>
+<td>Текущий пароль / Current password </td>
+</tr>
+<tr bgcolor="#f0f0f0">
+<td bgcolor="#e0e0e0">NEWPW</td>
+<td>New password</td>
+<td>CHAR</td>
+<td align=right>10</td>
+<td>Новый пароль / New password</td>
+</tr>
+</table>
+</ul>
+</ul>
+<p>
+<a name="refs"></a>
+<b>Жирным</b> шрифтом выделены ключевые поля.<br>
+Символом (*) помечены поля, содержащие код финансового инструмента.<br>
+Символом (+) помечена группа повторяющихся полей.
+<hr>
+<font size=-1>Документ создан при помощи TExplor2.exe 14.03.2008 12:19:04</font>
+</font>
+</body>
+</html>

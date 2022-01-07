@@ -22,7 +22,7 @@
 
 [**Tutors - expected math exam results**](https://github.com/alexeytankov/portfolio/tree/master/Tutors%20-%20expected%20math%20exam%20results) - Курсовой проект «Алгоритмы анализа данных»  
 
-[**MOEX**](https://github.com/alexeytankov/portfolio/tree/master/moex) - Информация об открытых позициях по основным производным финансовым инструментам, для аналитики и прогноза цены на - Курс доллара США на валютной бирже(USD000UTSTOM) и др.
+[**MOEX**](https://github.com/alexeytankov/portfolio/tree/master/moex) - Пет-проект, информация об открытых позициях по основным производным финансовым инструментам, для аналитики и прогноза цены на - Курс доллара США на валютной бирже(USD000UTSTOM) и др.
 
 
 ## Setup
